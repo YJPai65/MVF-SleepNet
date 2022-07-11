@@ -4,7 +4,7 @@ from keras.layers import Input, Dropout
 
 
 
-def vgg_16(input_shape, classes):
+def vgg_16_modified(input_shape, classes):
     input_signal = Input(shape=input_shape)
     x = layers.BatchNormalization()(input_signal)
 
@@ -52,7 +52,7 @@ def vgg_16(input_shape, classes):
 
 def build_STFTNet(input_shape, opt):
     # VGGNet
-    fea_model, pre_model = vgg_16(input_shape, 5)
+    fea_model, pre_model = vgg_16_modified(input_shape, 5)
     fea_model.compile(optimizer=opt,
                       loss='categorical_crossentropy',
                       metrics=['acc'])
