@@ -409,27 +409,3 @@ def cheb_polynomial(L_tilde, K):
 
 
 ##########################################################################################
-# get selected STFT features ############################
-def STFT_Feature(x, Fold_Num, context):
-    cut = context // 2
-    fold = Fold_Num.copy()
-    fold = np.delete(fold, -1)
-    id_del = np.concatenate([np.cumsum(fold) - i for i in range(1, context)])
-    id_del = np.sort(id_del)
-    x_c = x[cut: -cut, :, :, :]
-    x_c = np.delete(x_c, id_del, axis=0)
-    return x_c
-
-
-# get selected graph
-def Selected_Graph(x, Fold_Num, context):
-    cut = context // 2
-    fold = Fold_Num.copy()
-    fold = np.delete(fold, -1)
-    id_del = np.concatenate([np.cumsum(fold) - i for i in range(1, context)])
-    id_del = np.sort(id_del)
-    x_c = x[cut: -cut, :, :]
-    x_c = np.delete(x_c, id_del, axis=0)
-    return x_c
-
-
