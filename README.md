@@ -1,6 +1,12 @@
 # MVF-SleepNet
 This is the source code of the paper 'MVF-SleepNet: Multi-view Fusion Network for Sleep Stage Classification', which is improved on the basis of [MSTGCN](https://github.com/ziyujia/MSTGCN).
 
+## Environment Settings
+- Python 3.6
+- Cuda 10.1
+- Tensorflow-gpu 1.15.0
+- Keras 2.3.1
+
 ## How to use
 
 ### 1. Prepare the dataset:
