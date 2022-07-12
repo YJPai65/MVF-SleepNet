@@ -15,7 +15,7 @@ Download the ISRUC-Sleep-S3 dataset (https://sleeptight.isr.uc.pt/)
 
 ### 2. Preprocess the data:
 
-python rawdata_preprocess.py
+Run python rawdata_preprocess.py
 
 ### 3. Configuration:
 
