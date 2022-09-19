@@ -1,5 +1,5 @@
 # MVF-SleepNet
-This is the source code of the paper 'MVF-SleepNet: Multi-view Fusion Network for Sleep Stage Classification', which is improved on the basis of [MSTGCN](https://github.com/ziyujia/MSTGCN).
+This is the source code of the paper 'MVF-SleepNet: Multi-view Fusion Network for Sleep Stage Classification'. The paper has been accepted by IEEE Journal of Biomedical and Health Informatics (DOI: 10.1109/JBHI.2022.3208314).
 
 ## Environment Settings
 - Python 3.6
