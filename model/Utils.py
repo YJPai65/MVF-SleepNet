@@ -53,16 +53,7 @@ def AddContext_MultiSub(x, y, Fold_Num, context, i):
 
 
 def AddContext_MultiSub_STFT_GenFeature(x, y, Fold_Num, context, i):
-    '''
-    input:
-        x       : [N,V,F];
-        y       : [N,C]; (C:num_of_classes)
-        Fold_Num: [kfold];
-        context : int;
-        i       : int (i-th fold)
-    return:
-        x with contexts. [N',V,F]
-    '''
+
     cut = context // 2
     fold = Fold_Num.copy()
     fold = np.delete(fold, -1)
@@ -79,16 +70,7 @@ def AddContext_MultiSub_STFT_GenFeature(x, y, Fold_Num, context, i):
 
 
 def AddContext_MultiSub_STFT(x, y, Fold_Num, context, i):
-    '''
-    input:
-        x       : [N,V,F];
-        y       : [N,C]; (C:num_of_classes)
-        Fold_Num: [kfold];
-        context : int;
-        i       : int (i-th fold)
-    return:
-        x with contexts. [N',V,F]
-    '''
+
     cut = context // 2
     fold = Fold_Num.copy()
     fold = np.delete(fold, -1)
@@ -140,8 +122,7 @@ def get_spectrogram(waveform, n_length):
     spectrogram = np.abs(spectrogram)
     # Obtain the magnitude of the STFT.
     # Add a `channels` dimension, so that the spectrogram can be used
-    # as image-like input data with convolution layers (which expect
-    # shape (`batch_size`, `height`, `width`, `channels`).
+    # as image-like input data with convolution layers.
     spectrogram = spectrogram[..., np.newaxis]
     return spectrogram
 
